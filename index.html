@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="title">Bookshelf Apps</h1>
+        </header>
+
+        <div class="add-book">
+            <div class="circle"></div>
+            <div class="circle"></div>
+
+            <div class="form-container">
+                <h2 class="top-title">Tambah Buku Baru</h2>
+                <form id="formAddBook" action="" method="post" autocomplete="off">
+                    <div class="input-group">
+                        <input type="text" id="title" required class="input">
+                        <label for="title" class="input-label">Judul</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="author" required class="input">
+                        <label for="author" class="input-label">Penulis</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="year" required class="input" min="1900" max="2099">
+                        <label for="year" class="input-label">Tahun</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="is-read" />
+                        <label for="is-read"><span>Sudah Dibaca</span></label>
+                    </div>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="modal">
+            <div class="modal-content">
+                <h1>Yakin mau dihapus?</h1>
+                <div class="modal-body">
+                    <button id="confirm-delete">Konfirmasi</button>
+                    <button id="cancel-delete">Batal</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-container">
+            <h2 class="top-title">Rak Buku</h2>
+            <form class="search-container" id="formSearch" action="" method="post">
+                <input type="text" placeholder="Cari Judul Buku Disini" class="search-input" id="search">
+                <button type="submit" class="search-btn">
+                    <i class="ri-search-2-line"></i>
+                </button>
+            </form>
+
+            <div class="row-container">
+                <div class="left-container">
+                    <h2 class="title">Belum Selesai Dibaca</h2>
+                    <br>
+                    <div id="uncompleted">
+                    </div>
+                </div>
+                <div class="right-container">
+                    <h2 class="title">Selesai Dibaca</h2>
+                    <br>
+                    <div id="iscompleted">
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+
+        <script src="assets/js/script.js"></script>
+</body>
+
+</html>
